@@ -23,4 +23,4 @@ Sometimes it is referred to as ["test first"](http://www.extremeprogramming.org/
 ### Schools of TDD for Unit Testing
 
 # TODOs
-[ ] [Mockito v1.10.19 main javadoc](http://static.javadoc.io/org.mockito/mockito-core/1.10.19/org/mockito/Mockito.html)
+- [ ] [Mockito v1.10.19 main javadoc](http://static.javadoc.io/org.mockito/mockito-core/1.10.19/org/mockito/Mockito.html)
