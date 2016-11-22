@@ -30,9 +30,10 @@ The schools vary in their approaches regarding how test doubles are used.
 [Fowler, Martin; Mocks Aren't Stubs](http://martinfowler.com/articles/mocksArentStubs.html)
 
 # TODOs
-- [ ] Uncle Bob's three rules of TDD
+- [ ] Uncle Bob's three rules of TDD?
 - [ ] move TDD stuff into its own article (out of TestAnatomy)?
 - [ ] common JUnit annotations
+- [ ] Modernized version of Java examples for Mocks Aren't Stubs
 - [ ] things to avoid (hard to test)
   - [ ] global state
     - [ ] System/environment properties
