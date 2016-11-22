@@ -7,6 +7,7 @@ From http://wiki.c2.com/?ArrangeActAssert:
 >  1. Arrange all necessary preconditions and inputs.
 >  2. Act on the object or method under test.
 >  3. Assert that the expected results have occurred.
+
 #### Given-When-Then
 Developed as part of [Behavior-Driven Development](http://dannorth.net/introducing-bdd/), this is a pattern similar to Arrange-Act-Assert, but focused on behavior.
 From http://martinfowler.com/bliki/GivenWhenThen.html:
