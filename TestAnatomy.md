@@ -14,4 +14,10 @@ From http://martinfowler.com/bliki/GivenWhenThen.html:
 > - The **when** section is that behavior that you're specifying.
 > - Finally the **then** section describes the changes you expect due to the specified behavior.
 
-## Unit Tests
+## TDD
+Test-Driven Development is a technique which Kent Beck is largely credited with developing, though he sees himself as "rediscovering" it. From https://www.quora.com/Why-does-Kent-Beck-refer-to-the-rediscovery-of-test-driven-development:
+> The original description of TDD was in an ancient book about programming. It said you take the input tape, manually type in the output tape you expect, then program until the actual output tape matches the expected output. After I'd written the first xUnit framework in Smalltalk I remembered reading this and tried it out. That was the origin of TDD for me. When describing TDD to older programmers, I often hear, "Of course. How else could you program?" Therefore I refer to my role as "rediscovering" TDD. 
+
+Sometimes it is referred to as ["test first"](http://www.extremeprogramming.org/rules/testfirst.html). Since it is a design technique, many have started referring to it as [Test-Driven Design](http://www.drdobbs.com/architecture-and-design/test-driven-design/240168102).
+
+### Schools of TDD for Unit Testing
