@@ -23,4 +23,15 @@ Sometimes it is referred to as ["test first"](http://www.extremeprogramming.org/
 ### Schools of TDD for Unit Testing
 
 # TODOs
+- [ ] Uncle Bob's three rules of TDD
+- [ ] move TDD stuff into its own article (out of TestAnatomy)?
+- [ ] common JUnit annotations
+- [ ] things to avoid (hard to test)
+  - [ ] global state
+    - [ ] System/environment properties
+    - [ ] static (class) attributes other than final constants
+  - [ ] things that are difficult to mock/stub
+    - [ ] static methods
+    - [ ] final classes
+    - [ ] final methods
 - [ ] [Mockito v1.10.19 main javadoc](http://static.javadoc.io/org.mockito/mockito-core/1.10.19/org/mockito/Mockito.html)
