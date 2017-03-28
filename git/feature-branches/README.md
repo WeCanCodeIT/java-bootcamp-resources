@@ -26,7 +26,6 @@ On branch master
 Initial commit
 
 nothing to commit (create/copy files and use "git add" to track)
-brian@Fafhrd:~/demo/branch-demo$
 ```
 
 Now we need to create a branch and check it out (point HEAD at the branch, so changes will be committed to the branch). (Note: you will not be able to create a branch until something has been committed to master. This is because the master branch doesn't yet exist (no history), so there's nothing to branch *from*.) We can do this the long way, using the `branch` command followed by `checkout`:
