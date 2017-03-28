@@ -131,6 +131,8 @@ Merge made by the 'recursive' strategy.
  create mode 100644 src/main/resources/static/about-us.html
 ```
 
+If you have conflicts with `master`, you will need to resolve these conflicts then commit your changes. Resolving merge conflicts is outside the scope of this document.
+
 Afterwards, be sure to `push` your changes to GitHub (`git push`).
 
 ### Merging your changes into master
