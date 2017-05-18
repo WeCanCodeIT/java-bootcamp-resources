@@ -1,4 +1,4 @@
-# (Git) Bash
+# Git Bash
 
 ## The Bash Prompt
 
@@ -11,4 +11,26 @@ $
 
 ## Common Commands
 
-# Change Directory
+### Print Working Directory (`pwd`)
+
+Prints the current (working) directory
+
+|command	|description				|location		|output
+|-------	|-----------				|---------------|--------------
+|`pwd`		|prints current directory	|`~/wcci/code`	|`/c/Users/WeCanCodeIT/wcci/code`
+
+### Change Directory (`cd`)
+
+|command	|description				|location before|location after
+|-------	|-----------				|---------------|--------------
+|`cd`		|change to home directory	|`~/wcci/code`	|`~`	
+|`cd ..`	|change to parent directory	|`~/wcci/code`	|`~/wcci`
+|`cd code`	|change to specified child directory|`~/wcci`|`~/wcci/code`
+
+### Open Windows File Explorer (`explorer`)
+
+|command 		|target				|location		|opens File Explorer window pointed to…
+|-----------	|-----------		|---------------|---------------------------------------
+|`explorer .`	|current directory	|`~/wcci/code`	|`/c/Users/WeCanCodeIT/wcci/code`
+|`explorer ..`	|parent directory	|`~/wcci/code`	|`/c/Users/WeCanCodeIT/wcci`
+|`explorer code`|specified directory|`~/wcci`		|`/c/Users/WeCanCodeIT/wcci/code`
