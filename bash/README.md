@@ -25,7 +25,7 @@ Prints the current (working) directory
 |-------	|-----------				|---------------|--------------
 |`cd`		|change to home directory	|`~/wcci/code`	|`~`	
 |`cd ..`	|change to parent directory	|`~/wcci/code`	|`~/wcci`
-|`cd code`	|change to specified child directory|`~/wcci`|`~/wcci/code`
+|`cd code`	|change to specified directory|`~/wcci`|`~/wcci/code`
 
 ### Open Windows File Explorer (`explorer`)
 
