@@ -11,6 +11,15 @@ $
 
 ## Common Commands
 
+### Listing directory (aka folder) contents (`ls`)
+
+|command	|description
+|-------	|-----------
+|`ls`		|simple listing of directory contents
+|`ls -l`	|the `-l` switch gives a **long** listing of directory contents, including date, permissions, etc
+|`ls -a`	|the `-a` switch lists **all** directory contents, including those starting with a period("."), which bash considers hidden
+|`ls -al`	|combination of the `-a` and `-l` switches, a long listing of all contents<br>*Mnemonic tip:* ``ls -al` gives you "all" the info. `ls -all` works just as well and may be easier to remember. (Just don't confuse it with `-a`.)
+
 ### Print Working Directory (`pwd`)
 
 Prints the current (working) directory
