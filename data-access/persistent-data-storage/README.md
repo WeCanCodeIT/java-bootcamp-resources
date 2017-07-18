@@ -19,11 +19,13 @@ spring.datasource.driver-class-name=org.h2.Driver
 
 Spring (Boot) infers these as defaults based on the "h2" in our JDBC URL, so it isn't necessary for us to include these additional properties unless we need to use something other than the defaults.
 
-## H2 database files
-
 ## Path guidelines
 
 Specifying JDBC URLs is usually something that is done in a build process or similar, since paths can vary from environment to environment. In the interest of keeping it simple, it's a good idea to use a relative path. That way each developer will have a db created close to his or her source.
+
+## H2 database files
+
+H2 databases consist of a single file named \*.mv.db. There may also be a \*.trace.db file, but this is (as far as I know), a temporary file that will disappear.
 
 # Example
 
@@ -35,7 +37,7 @@ From the Spring Boot Reference:
 
 > You can set `spring.jpa.hibernate.ddl-auto` explicitly and the standard Hibernate property values are `none`, `validate`, `update`, `create`, `create-drop`. Spring Boot chooses a default value for you based on whether it thinks your database is embedded (default `create-drop`) or not (default `none`). An embedded database is detected by looking at the `Connection` type: `hsqldb`, `h2` and `derby` are embedded, the rest are not. Be careful when switching from in-memory to a ‘real’ database that you don’t make assumptions about the existence of the tables and data in the new platform. You either have to set `ddl-auto` explicitly, or use one of the other mechanisms to initialize the database.
 
-We are using h2, so by default Spring Boot uses `create-drop`, creating tables on startup, then dropping (deleting) them on shutdown.
+We are using h2, so by default Spring Boot uses `create-drop`, creating tables on startup, then dropping (deleting) them on shutdown. Moving forward, you should change this value to `update`, so that it will update tables as necessary without removing them.
 
 ## References
 
