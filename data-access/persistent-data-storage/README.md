@@ -2,7 +2,7 @@
 
 So far, we've been using a temporary embedded database
 
-Java does this in a standardized way, using something called a JDBC URL. It consists of the server name and some sort of path, sometimes with a protocol. We can still run H2 as embedded (as opposed to installing a standalone server) but use a persistent datastore. To do this, the JDBC URL looks like this:
+Java does this in a standardized way, using something called a JDBC URL. It consists of the server name and some sort of path, sometimes with a protocol. We can still run H2 as embedded (as opposed to installing a standalone server) but use a persistent datastore. To do this, add a JDBC URL to `application.properties` (`src/main/resources/application.properties`) that looks like this:
 
 ```
 spring.datasource.url=jdbc:h2:/path/to/my/database/file
