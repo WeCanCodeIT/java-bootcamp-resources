@@ -28,3 +28,15 @@ Specifying JDBC URLs is usually something that is done in a build process or sim
 # Example
 
 My fishes app resides at `~/WCCI/java-fishes-mvc-jpa`. If I use a JDBC URL of `jdbc:h2:../fishesDb/fishes`, running the app for the first time after this change will result in the directory `~/WCCI/fishesDb` being created containing a file called `fishes.mv.db` (full path `~/WCCI/fishesDb/fishes.mv.db`). Later, I will initialize my fishesDb folder as a git repository so that I can push to github. My github repository's contents will be the `fishes.mv.db` file and whatever extra documentation, etc that I add to my repository.
+
+## Database Initialization
+
+From the Spring Boot Reference:
+
+> You can set `spring.jpa.hibernate.ddl-auto` explicitly and the standard Hibernate property values are `none`, `validate`, `update`, `create`, `create-drop`. Spring Boot chooses a default value for you based on whether it thinks your database is embedded (default `create-drop`) or not (default `none`). An embedded database is detected by looking at the `Connection` type: `hsqldb`, `h2` and `derby` are embedded, the rest are not. Be careful when switching from in-memory to a ‘real’ database that you don’t make assumptions about the existence of the tables and data in the new platform. You either have to set `ddl-auto` explicitly, or use one of the other mechanisms to initialize the database.
+
+We are using h2, so by default Spring Boot uses `create-drop`, creating tables on startup, then dropping (deleting) them on shutdown.
+
+## References
+
+- [Spring Boot reference: Database Initialization](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html)
