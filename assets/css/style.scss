@@ -4,6 +4,13 @@
 @import "{{ site.theme }}";
 
 /* customizations here */
+.highlighter-rouge {
+    color: #ff8;
+}
+
+.language-bash.highlighter-rouge {
+    background-color: #555;
+}
 
 .language-bash.highlighter-rouge .highlight code {
     .gp {
