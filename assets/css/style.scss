@@ -4,12 +4,14 @@
 @import "{{ site.theme }}";
 
 /* customizations here */
-.highlighter-rouge {
-    color: #ff8;
+
+body {
+    background: #666;
 }
 
-.language-bash.highlighter-rouge {
-    background-color: #555;
+.highlighter-rouge {
+    background-color: #191919;
+    color: #ff8;
 }
 
 .language-bash.highlighter-rouge .highlight code {
