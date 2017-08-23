@@ -6,5 +6,7 @@
 /* customizations here */
 
 .language-bash.highlighter-rouge .highlight code {
-    background-color: white;
+    .o {
+        color: limegreen;
+    }
 }
