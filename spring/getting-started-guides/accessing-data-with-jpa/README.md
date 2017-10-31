@@ -1,6 +1,6 @@
 # Guide: Accessing Data with JPA
 
-First, refer to the general guidelines in [Project Setup for Spring Getting Started Guides](..).
+First, refer to the general guidelines in [Project Setup for Spring Getting Started Guides](../project-setup).
 
 This document contains modifications to [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/).
 
