@@ -85,7 +85,7 @@ Hibernate (the underlying JPA implementation) supports the logging of generated 
 spring.jpa.show-sql=true
 ```
 
-Afterwards, start (or restart) your server and examine the generated SQL statements.
+Afterwards, run your application again, then examine the generated SQL statements.
 
 ## Web-enable your app
 
@@ -101,6 +101,8 @@ Add the following dependencies to `build.gradle`:
 compile("org.springframework.boot:spring-boot-starter-thymeleaf")
 runtime("org.springframework.boot:spring-boot-devtools")
 ```
+
+After doing so, remember to run `gradle eclipse` and refresh your project in Eclipse.
 
 ### Create a template to display customers
 
