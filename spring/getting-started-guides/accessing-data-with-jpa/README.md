@@ -112,12 +112,6 @@ Create a controller (annotated with @Controller), and a thymeleaf template to di
 
 Once you have turned the app into an MVC app, you can use devtools to examine the in-memory H2 database that your app is using.
 
-#### Add devtools as a dependency
-
-Add the following line to the `dependencies` section in your `build.gradle`:
-
-After doing this, remember to run `gradle eclipse`, then refresh project.
-
 #### View H2 console in the browser
 
 View the H2 console by going to `http://localhost:8080/h2-console`. For *JDBC URL*, specify `jdbc:h2:mem:testdb`.
