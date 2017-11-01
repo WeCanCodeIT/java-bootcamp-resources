@@ -1,8 +1,10 @@
 # Using persistent storage (vs embedded) for H2 data access
 
-So far, we've been using a temporary embedded database
+So far, we've been using a temporary embedded in-memory database that disappears once our app shuts down. We can still run H2 as embedded (as opposed to installing a standalone server) but use a persistent datastore. To do so, we need to specify a *JDBC URL*.
 
-Java does this in a standardized way, using something called a JDBC URL. It consists of the server name and some sort of path, sometimes with a protocol. We can still run H2 as embedded (as opposed to installing a standalone server) but use a persistent datastore. To do this, add a JDBC URL to `application.properties` (`src/main/resources/application.properties`) that looks like this:
+Java uses a JDBC URL to standardize how we locate databases. Like other URLs (technically, URIs), it consists of a protocol (`jdbc`) followed by a database-specific (often called vendor-specific) prefix (`h2`), then arbitrary elements related to the specific database.
+
+In order to use a persistent database, we can add a JDBC URL to `application.properties` (`src/main/resources/application.properties`) that looks like this:
 
 ```
 spring.datasource.url=jdbc:h2:/path/to/my/database/file
@@ -17,7 +19,7 @@ spring.datasource.password=
 spring.datasource.driver-class-name=org.h2.Driver
 ```
 
-Spring (Boot) infers these as defaults based on the "h2" in our JDBC URL, so it isn't necessary for us to include these additional properties unless we need to use something other than the defaults.
+Spring Boot infers these as defaults based on the "h2" in our JDBC URL, so it isn't necessary for us to include these additional properties unless we need to use something other than the defaults.
 
 ## Path guidelines
 
