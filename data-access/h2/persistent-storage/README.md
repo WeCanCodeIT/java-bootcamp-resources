@@ -25,7 +25,7 @@ Specifying JDBC URLs is usually something that is done in a build process or sim
 
 ## H2 database files
 
-H2 databases consist of a single file named \*.mv.db. There may also be a \*.trace.db file, but this is (as far as I know), a temporary file that will disappear.
+H2 databases consist of a single file named `*.mv.db`. There may also be a `*.trace.db` file, but this is (as far as I know), a temporary file that will disappear.
 
 # Example
 
@@ -41,4 +41,6 @@ We are using h2, so by default Spring Boot uses `create-drop`, creating tables o
 
 ## References
 
-- [Spring Boot reference: Database Initialization](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html)
+- Spring Boot Reference Guide: [29.1 Configure a DataSource](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html#boot-features-configure-datasource)
+- H2 documentation: [Database URL Overview](http://h2database.com/html/features.html#database_url)
+- Spring Boot Reference Guide: [Database initialization](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html)
