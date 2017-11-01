@@ -1,4 +1,4 @@
-# Using persistent storage (vs embedded) for H2 data access
+# Configuring H2 to Use a Persistent Database
 
 So far, we've been using a temporary embedded in-memory database that disappears once our app shuts down. We can still run H2 as embedded (as opposed to installing a standalone server) but use a persistent datastore. To do so, we need to specify a *JDBC URL*.
 
