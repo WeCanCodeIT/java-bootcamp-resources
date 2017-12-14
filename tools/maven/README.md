@@ -32,13 +32,13 @@ We need to add a *classpath variable* so that Eclipse can find your dependencies
 
 ## Setting up your project
 
-To create and configure a project using Maven (we will assume you already have a `pom.xml`):
+To create and configure a project using Maven (we will assume you already have a `pom.xml` file):
 
 1. Create a project folder
 
 	Create a folder to house your project. For my example, I will call this `myProject`.
 
-1. Place your pom.xml in the project folder
+1. Place `pom.xml` in the project folder
 
 1. Create source folders
 
