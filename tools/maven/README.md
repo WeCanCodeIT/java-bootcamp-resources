@@ -26,6 +26,10 @@ Here are the [official installation instructions](https://maven.apache.org/insta
 
 	From a (new) Git Bash or command prompt, type `mvn -v`.
 
+## Configuring Eclipse (in Windows)
+
+We need to add a *classpath variable* so that Eclipse can find your dependencies in your local Maven repository. To do this, select *Preferences* from your *Window* menu, then *Java->Build Path->Classpath Variables*. Create a *New…* variable with the *Name* `M2_REPO` and the *Path* to "C:\Documents and Settings\\*your-username*\\.m2\repository".
+
 ## Setting up your project
 
 To create and configure a project using Maven (we will assume you already have a `pom.xml`):
