@@ -1,0 +1,34 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* customizations here */
+
+body {
+    background: #666;
+}
+
+.highlighter-rouge {
+    background-color: #191919;
+    color: #ff8;
+}
+
+.language-bash.highlighter-rouge .highlight code {
+    .gp {
+        color: limegreen;
+    }
+
+    .k {
+        color: #39add1;
+    }
+
+    .o {
+        color: hotpink;
+    }
+
+    .s1 {
+        color: orange;
+    }
+
+}

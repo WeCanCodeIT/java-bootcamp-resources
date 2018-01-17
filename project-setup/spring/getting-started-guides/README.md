@@ -1,0 +1,1 @@
+This has moved [here](../../../spring/getting-started-guides/project-setup).
