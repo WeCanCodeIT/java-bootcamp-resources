@@ -34,6 +34,8 @@
 - **Constructor**: shares the same name as the class, has no data type, **constructs** the object 
 
 ## Week 3 Key Terms
+- **Raw Type**: is the name of a generic class or interface without any type arguments. See a lot of times in legacy code as generics were introduced in Java 5
+- **Generic Type**: is a generic class or interface that is parameterized over types, You will see <> the diamond operator being used
 - **API**: (Application Programming Interface) is a collection of prewritten packages, classes, and interfaces with their respective methods, fields and constructors.
 - **Abstraction**: a process of hiding the implementation details from the user, only the functionality will be provided to the user.
 - **Parameterized Type**: requirement to use a data type parameter (Specify what Class something belongs to)
