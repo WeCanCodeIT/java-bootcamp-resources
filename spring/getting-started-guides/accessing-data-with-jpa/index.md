@@ -106,7 +106,7 @@ After doing so, remember to run `gradle eclipse` and refresh your project in Ecl
 
 ### Create a template to display customers
 
-Create a controller (annotated with @Controller), and a thymeleaf template to display a customer list. The `CustomerRepository` class extends `org.springframework.data.repository.CrudRepository<Customer, Long>`, so you can use its `Iterable<Customer> findAll()` method to fetch your customers.
+Create a controller (annotated with @Controller), and a thymeleaf template to display a customer list. The `CustomerRepository` class extends `org.springframework.data.repository.CrudRepository<Customer, Long>`, so you can inject it into your controller (using `@Resource`), then call its `Iterable<Customer> findAll()` method to fetch your customers.
 
 ### Examining the in-memory database with H2
 
