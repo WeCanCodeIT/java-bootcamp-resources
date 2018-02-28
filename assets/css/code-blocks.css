@@ -1,6 +1,7 @@
 .code-block {
 	display: grid;
 	grid-template-columns: auto 2rem;
+	margin-bottom: 20px;
 }
 .copy-code-button {
     background: #eee url(../images/clippy.svg) 50% 50% no-repeat;
