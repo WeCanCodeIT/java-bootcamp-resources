@@ -22,6 +22,7 @@ public class CustomerApplication {
 	}
 }
 ```
+{: .copyable}
 
 ```java
 package hello;
@@ -76,6 +77,7 @@ public class CustomerPopulator implements CommandLineRunner {
 
 }
 ```
+{: .copyable}
 
 ## Turn on debug SQL logging
 
@@ -84,6 +86,7 @@ Hibernate (the underlying JPA implementation) supports the logging of generated 
 ```properties
 spring.jpa.show-sql=true
 ```
+{: .copyable}
 
 Afterwards, run your application again, then examine the generated SQL statements.
 
@@ -101,6 +104,7 @@ Add the following dependencies to `build.gradle`:
 compile("org.springframework.boot:spring-boot-starter-thymeleaf")
 runtime("org.springframework.boot:spring-boot-devtools")
 ```
+{: .copyable}
 
 After doing so, remember to run `gradle eclipse` and refresh your project in Eclipse.
 
