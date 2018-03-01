@@ -118,4 +118,4 @@ Once you have turned the app into an MVC app, you can use devtools to examine th
 
 #### View H2 console in the browser
 
-View the H2 console by going to `http://localhost:8080/h2-console`. For *JDBC URL*, specify `jdbc:h2:mem:testdb`.
+View the H2 console by going to [http://localhost:8080/h2-console](http://localhost:8080/h2-console). For *JDBC URL*, specify `jdbc:h2:mem:testdb`.
