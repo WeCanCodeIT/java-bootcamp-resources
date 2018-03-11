@@ -39,7 +39,6 @@
 </form>
 ```
 - We are going to build a structure that looks like this...
-```bash
 <form method="POST">
  <div>
   <label>   </label>
@@ -49,7 +48,7 @@
  <button th:formaction="@{requestmapping}"> button text</button>
  </div>
 </form>
-```
+
 
 ### How does it all link together?
 - Your form will interact directly with your `Controller`
