@@ -74,7 +74,7 @@
 
 ### Search by Instructor and find all the courses that particular instructor is teaching
 This is quite the task so lets break it down step by step...Right now our instructor is simply a `String` of their name. This is not going to go over well when we try and connect a course to a particular instructor.
-- Let's JPA enable an `@Entity` for our `Instructor`
+- Let's JPA enable our `Instructor`
 - `Instructor` will have one field, simply `name`
 - One instructor will be able to teach many different courses 
 - Update necessary classes to build in this functionality
@@ -92,5 +92,6 @@ HTML forms will allow the user to interact with the information in customized wa
   - Sort the information in some way
   - Add details to the course (maybe tags or categories) and pull the courses in this fashion
   - Add some javascript...like an alert box when you go to remove a course that asks are you sure?
+  - Wire up to the H2 console and make a persistent database
   
 
