@@ -38,5 +38,17 @@
 
 </form>
 ```
+- We are going to build a structure that looks like this...
+```bash
+<form method="POST">
+ <div>
+  <label>   </label>
+  <input type="?" name="?" />
+ </div>
+ <div>
+ <button th:formaction="@{requestmapping}" button text</button>
+</form>
+```
+
 
 
