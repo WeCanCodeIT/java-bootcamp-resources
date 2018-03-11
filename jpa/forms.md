@@ -83,7 +83,7 @@ This is quite the task so lets break it down step by step...Right now our instru
 - Now that we can add and remove courses let's `findCoursesByInstructor` in our `Controller`
   - Again we need to connect the HTML form's text field for `instructorName` to our `Instructor` object...how can we do this?
   - `model.addAttribute("courses", courseRepo.?);`
-  `return "instructor"` as we will now create a new Thymeleaf template for our instructor and the classes he/she teaches
+  - `return "instructor"` as we will now create a new Thymeleaf template for our instructor and the classes he/she teaches
 
 
 
