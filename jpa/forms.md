@@ -46,7 +46,8 @@
   <input type="?" name="?" />
  </div>
  <div>
- <button th:formaction="@{requestmapping}" button text</button>
+ <button th:formaction="@{requestmapping}"> button text</button>
+ </div>
 </form>
 ```
 
