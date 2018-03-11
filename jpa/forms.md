@@ -65,10 +65,11 @@
 - Read in parameters for the 3 require text fields of course information
 - `save` the `newCourse` 
 - `return "redirect:/courses"` will refresh the page and dynamically update with the newly added course!
-- **Stretch Task:** Ensure duplicates cannot be added 
+- **Stretch Task:** Ensure duplicates cannot be added (you will need to first look for the existence of the course, creating `findByName(name)` can come in handy in the `Course Repository`!
 
 ### Create an HTML form and `Controller` to dynamically `removeCourse`  in the application
 - Include a text input field for course `name` as we are going to remove a course by its name
+- **Stretch Task:** Simply refresh the page if user ties to remove a course that doesn't exist
 
 
 
