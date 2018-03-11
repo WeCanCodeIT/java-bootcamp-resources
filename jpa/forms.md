@@ -85,5 +85,11 @@ This is quite the task so lets break it down step by step...Right now our instru
   - `model.addAttribute("courses", courseRepo.?);`
   - `return "instructor"` as we will now create a new Thymeleaf template for our instructor and the classes he/she teaches
 
-
+### Summary 
+HTML forms will allow the user to interact with the information in customized ways. This demo is just the start. Here are some stretch tasks for you to tackle:
+- Build out more queries and attach a button to trigger these responses
+  - Sort the information in some way
+  - Add details to the course (maybe tags or categories) and pull the courses in this fashion
+  - Add some javascript...like an alert box when you go to remove a course that asks are you sure?
+  
 
