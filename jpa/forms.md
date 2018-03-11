@@ -65,7 +65,7 @@
 - Ensure the `RequestMapping` matches with the button
 - Read in parameters for the 3 require text fields of course information
 - `save` the `newCourse` 
-- `return "redirect:/courses"` will refresh the page and dynamically update with the newly added course!
+- `return "redirect:/show-courses"` will refresh the page and dynamically update with the newly added course!
 - **Stretch Task:** Ensure duplicates cannot be added (you will need to first look for the existence of the course, creating `findByName(name)` can come in handy in the `Course Repository`!
 
 ### Create an HTML form and `Controller` to dynamically `removeCourse`  in the application
