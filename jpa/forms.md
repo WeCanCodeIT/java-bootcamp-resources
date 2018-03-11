@@ -71,5 +71,19 @@
 - Include a text input field for course `name` as we are going to remove a course by its name
 - **Stretch Task:** Simply refresh the page if user ties to remove a course that doesn't exist
 
+### Search by Instructor and find all the courses that particular instructor is teaching
+This is quite the task so lets break it down step by step...Right now our instructor is simply a `String` of their name. This is not going to go over well when we try and connect a course to a particular instructor.
+- Let's JPA enable an `@Entity` for our `Instructor`
+- `Instructor` will have one field, simply `name`
+- One instructor will be able to teach many different courses 
+- Update necessary classes to build in this functionality
+- Issues will happen in our `Controller` as we can no longer add a course by `String instructorName`
+  - Think about it...how can we still pull our instructor's name? How do we get the needed access to this info? Where should we begin?
+  - Once we get this info...we need to update our `newCourse` which has parameters (`String`, `String`, `Instructor`)
+- Now that we can add and remove courses let's `findCoursesByInstructor` in our `Controller`
+  - Again we need to connect the HTML form's text field for `instructorName` to our `Instructor` object...how can we do this?
+  - `model.addAttribute("courses", courseRepo.?);`
+  `return "instructor"` as we will now create a new Thymeleaf template for our instructor and the classes he/she teaches
+
 
 
