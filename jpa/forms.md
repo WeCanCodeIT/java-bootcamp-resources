@@ -55,7 +55,7 @@
 - The fields of the form will match with parameters created by a `Controller` `RequestMapping` 
 
 ### Create an HTML form to dynamically add a course to the application
-- Include a text imput field for course `name`
+- Include a text input field for course `name`
 - Include a text input field for course `description`
 - Include a text input field for `instructorName`
 - Include a button that maps to `@{/add-course}`
@@ -65,6 +65,10 @@
 - Read in parameters for the 3 require text fields of course information
 - `save` the `newCourse` 
 - `return "redirect:/courses"` will refresh the page and dynamically update with the newly added course!
+- **Stretch Task:** Ensure duplicates cannot be added 
+
+## Create an HTML form and `Controller` to dynamically `removeCourse`  in the application
+- Include a text input field for course `name` as we are going to remove a course by its name
 
 
 
