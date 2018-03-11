@@ -50,5 +50,21 @@
 </form>
 ```
 
+### How does it all link together?
+- Your form will interact directly with your `Controller`
+- The fields of the form will match with parameters created by a `Controller` `RequestMapping` 
+
+### Create an HTML form to dynamically add a course to the application
+- Include a text imput field for course `name`
+- Include a text input field for course `description`
+- Include a text input field for `instructorName`
+- Include a button that maps to `@{/add-course}`
+
+### Create a method in the `Controller` to `addCourse`
+- Ensure the `RequestMapping` matches with the button
+- Read in parameters for the 3 require text fields of course information
+- `save` the `newCourse` 
+- `return "redirect:/courses"` will refresh the page and dynamically update with the newly added course!
+
 
 
