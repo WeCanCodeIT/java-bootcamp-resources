@@ -9,5 +9,34 @@
 ### Project Setup
 - Clone [temp-courses-forms](https://github.com/WeCanCodeIT/temp-courses-forms)
 - Navigate into this directory and run `gradle eclipse` 
+- Import the project into `Eclipse`
+
+### Project Review
+- This project is very similar to previous but is now `JPA` enabled
+- Shows all courses and you can dive into an individual course
+
+### Intro to HTML Forms
+- Reference: [MDN HTML FORMS](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form)
+- HTML Forms are one of the main points of interaction between a user and a web site or application. They allow users to send data to the web site. Most of the time that data is sent to the web server, but the web page can also intercept it to use it on its own.
+- Made up of widgets
+  - Text Fields
+  - Buttons
+  - Check Boxes
+  - Select Boxes
+  - Radio Buttons
+- The main difference between a HTML form and a regular HTML document is that most of the time, the data collected by the form is sent to a web server
+- `<input type="text">` defines a text field
+- `<input type="radio">` defines a radio button (for selecting one of many choices)
+- `<input type="submit">` defines the submit button for form submission
+- You will use `POST` more often than `GET` to submit secure form data
+
+
+### Implementing our form
+- All HTML forms begin with a `<form>` element that looks like this: 
+```bash
+<form action="/my-handling-form-page" method="post">
+
+</form>
+```
 
 
