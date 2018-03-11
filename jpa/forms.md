@@ -95,5 +95,6 @@ HTML forms will allow the user to interact with the information in customized wa
   - Add details to the course (maybe tags or categories) and pull the courses in this fashion
   - Add some javascript...like an alert box when you go to remove a course that asks are you sure?
   - Wire up to the H2 console and make a persistent database
+  - Style your form to make it beautiful
   
 
