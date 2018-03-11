@@ -39,15 +39,15 @@
 </form>
 ```
 - We are going to build a structure that looks like this...
-<form method="POST">
- <div>
-  <label>   </label>
-  <input type="?" name="?" />
- </div>
- <div>
- <button th:formaction="@{requestmapping}"> button text</button>
- </div>
-</form>
+`<form method="POST">`
+ `<div>`
+  `<label>   </label>`
+  `<input type="?" name="?" />`
+ `</div>`
+ `<div>`
+ `<button th:formaction="@{requestmapping}"> button text</button>`
+ `</div>`
+`</form>`
 
 
 ### How does it all link together?
