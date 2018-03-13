@@ -1,2 +1,2 @@
 theme: jekyll-theme-midnight
-exclude: serve.sh, Gemfile, Gemfile.lock
+exclude: [serve.sh, Gemfile, Gemfile.lock]
