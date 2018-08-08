@@ -14,9 +14,9 @@ public void printLength(String value) {
 
 If we avoid `null` in our code, we can avoid the check altogether. Also, what is the length of `null`? Is it zero? That's the length of the empty string (`""`). Ah, ambiguity.
 
-## Avoiding Nulls before Java 8
+## Avoiding `null` before Java 8
 
-To avoid `null`, we do things like assigning default values for instance attributes and/or implementing the [Null Object](https://en.wikipedia.org/wiki/Null_object_pattern) pattern. A simple example of this is initializing a String variable to empty. Instead of:
+To avoid `null`, we do things like assigning default values for instance attributes and/or implementing the [Null Object](https://en.wikipedia.org/wiki/Null_object_pattern) pattern. A simple example of this is initializing a String variable to the empty string. Instead of:
 
 ```java
 class MyClass {
@@ -73,29 +73,68 @@ public void printLength(Optional<String> value) {
 
 ### Fail if no value is present
 
-Often, if no value is present, this isn't what we expect. In this case, we can tell the `Optional` to throw an exception (better sooner than later). This requires a `java.util.function.Supplier` that will return an `Exception`. Here we use a lambda, causing an `IllegalStateException` to be thrown if no value is present:
+Often, if no value is present, this isn't what we expect. In this case, we can tell the `Optional` to throw an exception (better sooner than later). This requires a `java.util.function.Supplier` that will return an `Exception`. Here we use an anonymous inner class to create a `Supplier`, causing an `IllegalStateException` to be thrown if no value is present:
 
 ```java
-public void printLength(Optional<String> value) {
-	Supplier<IllegalStateException> exceptionSupplier = () -> new IllegalStateException("value must be present!");
+public void throwExceptionOnNoValue(Optional<String> value) {
+	Supplier<IllegalStateException> exceptionSupplier = new Supplier<IllegalStateException>() {
+		@Override
+		public IllegalStateException get() {
+			return new IllegalStateException("value must be present!");
+		}
+	};
 	int length = value.orElseThrow(exceptionSupplier).length();
 	System.out.println("The string's length is " + length);
 }
 ```
 
+A more common way to create a `Supplier` is by using a lambda expression or a method reference:
 
+```java
+public void printLength(Optional<String> value) {
+	Supplier<IllegalStateException> exceptionSupplier = () -> new IllegalStateException("value must be present!"); // lambda expression
+	int length = value.orElseThrow(exceptionSupplier).length();
+	System.out.println("The string's length is " + length);
+}
+```
 
 ## Creating an Optional
 
-`Optional` offers a few static methods to initialize/create `Optional` values.
+`Optional` offers static methods to initialize/create `Optional` values.
 
 ### of(T)
 
-- don't do this (why? use `ofNullable`?)
+If we know a value is *not* `null`, we can use `of` to create an `Optional` containing that value:
 
-### empty
+```java
+Optional<String> value = Optional.of("foo");
+System.out.println("The contained value is " + value.get());
+```
 
-### ofNullable
+Note that if we use `of`, but the value *is* `null`, a `NullPointerException` will be thrown.
 
-TODO
-- verify that code snippets work
+### empty()
+
+If we need to create an `Optional` that contains no value, we can use `empty`:
+
+```java
+Optional<String> value = Optional.empty();
+if(!value.isPresent()) {
+	System.out.println("This optional does not contain a value.");
+}
+```
+
+### ofNullable(T)
+
+We may not know whether a variable's value is `null`. This is often the case if we are protecting ourselves from `null` from external sources. This is where we use `ofNullable`:
+
+```java
+public void doSomethingWith(String parameter) {
+	Optional<String> value = Optional.ofNullable(parameter);
+	if(value.isPresent()) {
+		System.out.println("The contained value is " + value.get());
+	} else {
+		System.out.println("This optional does not contain a value.");
+	}
+}
+```
