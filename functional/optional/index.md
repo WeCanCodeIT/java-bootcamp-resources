@@ -138,3 +138,134 @@ public void doSomethingWith(String parameter) {
 	}
 }
 ```
+## Initializing `Optional` values
+
+Ensure that `Optional` instance variables are initialized, or you'll find yourself in the land of `null` all over again. Just like any other instance variable, if an `Optional` is not assigned a value, its value will be `null`.
+
+```java
+public class Cage {
+	private Optional<VirtualPet> inhabitant; // will be initialized to null!
+}
+```
+
+Initialize these to empty instead:
+
+```java
+public class Cage {
+	private Optional<VirtualPet> inhabitant = Optional.empty();
+}
+```
+
+Then an `inhabitant` can be assigned via constructor:
+
+```java
+public class Cage {
+	private Optional<VirtualPet> inhabitant = Optional.empty();
+
+	public Cage(VirtualPet forPet) {
+		this.inhabitant = Optional.of(forPet);
+	}
+}
+```
+
+### Aiming for immutability
+
+Better yet, if you are aiming for *immutability* (a noble aspiration), give constructors for empty and non-empty cages. If possible, it's better to use two separate constructors here than to use `ofNullable`, since this clearly expresses intent:
+
+```java
+public class Cage {
+	private final Optional<VirtualPet> inhabitant;
+
+	/**
+	 * Creates an empty cage.
+	 */
+	public Cage() {
+		this.inhabitant = Optional.empty();
+	}
+
+	public Cage(VirtualPet forPet) {
+		this.inhabitant = Optional.of(forPet);
+	}
+}
+```
+
+## Testing with `Optional`
+
+There is no really good reason to fake an optional. Just use a real instance. Mock/dummy the object it contains if necessary. Mocking `Optional`s is difficult anyway, since `Optional` is a final class.
+
+### A `Cage` that's a bit different
+
+For the purposes of illustration, we'll change the `Cage` class a bit. We'll pass the `Optional` `inhabitant` into the constructor rather than creating it within the constructor. We'll also add some methods, then show how we would write tests to drive them. Note that this isn't suggested. The implementation of `Cage` above is cleaner and easier to work with unless we are already dealing with `Optional<VirtualPet>` instances.
+
+Here's the updated class:
+
+```java
+public class Cage {
+
+	private Optional<VirtualPet> inhabitant;
+
+	/**
+	 * false is the default for a boolean value, just stating it explicitly.
+	 */
+	private boolean locked = false;
+
+	public Cage(Optional<VirtualPet> inhabitant) {
+		this.inhabitant = inhabitant;
+	}
+
+	public boolean isLocked() {
+		return locked;
+	}
+
+	public void lock() {
+		locked = true;
+	}
+
+	public boolean isInhabited() {
+		return inhabitant.isPresent();
+	}
+}
+```
+
+### Use `empty()` When the value doesn't matter
+
+The `isLocked()` and `lock()` methods above do not rely on whether or not the cage is inhabited. Since the value of `inhabitant` doesn't matter, we can (and **should**) simply use `Optional.empty()` in our test. If we were to supply an actual inhabitant value, someone reading our tests may infer that it is significant.
+
+```java
+@Test
+public void shouldBeUnlockedByDefault() {
+	Cage cage = new Cage(Optional.empty());
+	assertThat(cage.isLocked(), is(false));
+}
+
+@Test
+public void shouldBeLockable() {
+	Cage cage = new Cage(Optional.empty());
+	cage.lock();
+	assertThat(cage.isLocked(), is(true));
+}
+```
+
+The test and implementation of `unlock()` is left to the reader. ;-)
+
+### When the value matters
+
+When the value matters, we would either create a real `VirtualPet` or create a mock, then use that to create an optional. Here, I will use a mock. Since we are test-driving `isInhabited()`, a method with a `boolean` return value, we'll need to create a test for each case:
+
+```java
+@Test
+public void shouldBeInhabited() {
+	// If we used this more than a few times, we would make this an instance variable and use the @Mock annotation.
+	VirtualPet inhabitant = Mockito.mock(VirtualPet.class);
+	Cage cage = new Cage(Optional.of(inhabitant));
+	assertThat(cage.isInhabited(), is(true));
+}
+
+@Test
+public void shouldNotBeInhabited() {
+	Cage cage = new Cage(Optional.empty());
+	assertThat(cage.isInhabited(), is(false));
+}
+```
+
+*How many `null`s are in the above code? How could you force a `NullPointerException`? [Hint: this is one reason why creating the `Optional` inside our constructor is probably a better implementaion.]*
