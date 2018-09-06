@@ -14,7 +14,7 @@
 
 1. With a new repository initialized, re-check the status of your project: `git status`. This will show you all the untracked files inside of your repository.
 
-1. Now it's time to track your files so they will be included in your commit. A good practice is to commit often so you should be adding everything each time. The command for which is: `git add .`.
+1. Now it's time to track your files so they will be included in your commit. Generally, it's better to explicitly add things, but this time let's add everything in the current folder (represented by `.` in the following command) for simplicity's sake. That command is `git add .`.
 
 1. `git status` again. All of your files should have changed color from red to green.
 
@@ -28,9 +28,9 @@
 
 1. Name this new repository the same thing that your project directory is named (i.e. your-projects-directory-name). Copy and paste to minimize the possibility of typos. You shouldn't change anything else in this window.
 
-1. Push the button at the bottom ***Create repository*** to create new repository.
+1. Push the button at the bottom ***Create repository*** to create a new repository.
 
-1. On this next page, there are two lines of code under **…or push an existing repository from the command line**. Copy these and paste them to your command line (`<ctrl> + <shift> + <V>`). Push `<enter>` to submit the final line.
+1. Creating the repository will take you to a page that with a heading reading **Quick setup — if you’ve done this kind of thing before**. What we are interested in are the commands in the **…or push an existing repository from the command line** section. Copy these and paste them to your command line (`<ctrl> + <shift> + <V>`). Be sure to hit `<enter>` to submit the final line.
 
 1. Your local repository and remote repository are now connected.
 
